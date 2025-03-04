@@ -64,11 +64,10 @@ nav {
 }
 
 .hero {
-  min-height: calc(100vh - 100px);
+  min-height: calc(80vh - 100px);
   display: flex;
   align-items: center;
   position: relative;
-  padding: 100px 0;
 }
 
 .hero-content {
@@ -122,7 +121,7 @@ nav {
 }
 
 section {
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
 }
 
@@ -428,5 +427,144 @@ footer {
 
   .projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header and Navigation */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  .hero-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+  }
+
+  /* About Section */
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Experience Timeline */
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 15px;
+  }
+
+  .timeline-item::after {
+    left: 8px;
+  }
+
+  .left, .right {
+    left: 0;
+    text-align: left;
+  }
+
+  .left::after, .right::after {
+    left: 8px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+
+  /* Projects */
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 30px 15px;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* Responsive Typography */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-title::after {
+    width: 80px;
+  }
+}
+
+/* Additional Mobile Enhancements */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
   }
 }
